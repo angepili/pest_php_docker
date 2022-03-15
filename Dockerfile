@@ -1,4 +1,4 @@
-FROM php:8.0-apache
+FROM wordpress:php8.1-apache
 WORKDIR /var/www/html/
 
 RUN apt-get clean
@@ -8,10 +8,7 @@ RUN apt-get update
 RUN apt-get install -y \
         git \
         curl \
-        wget 
-
-#install some base extensions
-RUN apt-get install -y \
+        wget \
         libzip-dev \
         zip \
         unzip \
